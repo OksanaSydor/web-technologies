@@ -1,0 +1,31 @@
+.circle {
+    list-style-type: circle;
+}
+
+a {
+    color: violet;
+}
+
+.green {
+    color: green;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.pictogram {
+    list-style-image: url("check.png");
+}
+
+div ul ul li{
+    list-style-type: none;
+}
+
+.square a{
+    text-decoration: none;
+}
+
+ol {
+    list-style-position: inside;
+}
