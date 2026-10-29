@@ -1,0 +1,67 @@
+/* Загальні стилі сторінки */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #2e1065;
+    background-color: #faf7ff;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 26px;
+}
+
+/* Спільні параметри всіх блоків.
+   box-sizing зберігає загальний розмір блока 300 × 200 px з урахуванням padding. */
+.block {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #c4b5fd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e1065;
+}
+
+/* Блок 1. Діагональні смуги двох відтінків фіолетового. */
+.block:nth-of-type(1) {
+    background-image: linear-gradient(45deg, #c4b5fd 50%, #7c3aed 50%);
+    background-size: 40px 40px;
+}
+
+/* Блок 2. Клітинки з двох перпендикулярних лінійних градієнтів.
+   Один із кольорів напівпрозорий (rgba). */
+.block:nth-of-type(2) {
+    background-color: #f5f3ff;
+    background-image:
+        linear-gradient(to right, rgba(124, 58, 237, 0.55) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(124, 58, 237, 0.55) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Блок 3. Круговий радіальний градієнт із трьома кольорами. */
+.block:nth-of-type(3) {
+    background-image: radial-gradient(
+        circle farthest-corner at 30px 20px,
+        #ede9fe 0%,
+        #a78bfa 45%,
+        #5b21b6 100%
+    );
+    color: #ffffff;
+}
+
+/* Блок 4. Напівпрозорий градієнт поверх суцільного фону.
+   Градієнт займає нижню половину блока і не повторюється. */
+.block:nth-of-type(4) {
+    background-color: #a855f7;
+    background-image: linear-gradient(to top, rgba(46, 16, 101, 0.55), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+    color: #ffffff;
+}

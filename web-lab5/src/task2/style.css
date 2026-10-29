@@ -1,0 +1,97 @@
+/* Оформлення сторінки за допомогою властивостей CSS з теоретичного матеріалу */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f7f2fa;
+    color: #38233f;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 24px;
+}
+
+th,
+td {
+    border: 2px solid #f8eef9;
+    padding: 24px 12px;
+}
+
+thead th {
+    background: #b98cbe;
+    color: #32153b;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+}
+
+thead th:first-child {
+    width: 20%;
+    background: #eadcec;
+    color: #48234f;
+    text-align: left;
+}
+
+thead th:nth-child(2) {
+    background: #d6bfdc;
+    color: #48234f;
+}
+
+thead th:nth-child(3) {
+    background: #b98cbe;
+    color: #32153b;
+}
+
+thead th:nth-child(4) {
+    background: #805087;
+    color: #ffffff;
+}
+
+thead th:nth-child(5) {
+    background: #48234f;
+    color: #ffffff;
+}
+
+thead span {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+tbody th {
+    width: 20%;
+    background: #805087;
+    color: #ffffff;
+    text-align: left;
+    font-weight: normal;
+}
+
+tbody td {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #48234f;
+}
+
+/* Нові рядки автоматично отримують один із двох кольорів */
+tbody tr:nth-child(odd) td {
+    background: #d6bfdc;
+}
+
+tbody tr:nth-child(even) td {
+    background: #f0e3f1;
+}

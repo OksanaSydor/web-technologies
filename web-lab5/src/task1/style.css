@@ -1,0 +1,114 @@
+
+body {
+  margin: 0;
+  padding: 20px 21px;
+  font-family: Arial, sans-serif;
+  background-color: rgb(255, 165, 0);
+}
+
+body > div {
+  width: 500px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(255, 165, 0);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.plans,
+.plans ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+}
+
+.plans {
+  padding: 0 20px 0 50px;
+  background-color: rgb(103, 158, 128);
+}
+
+.plans ul {
+  padding: 0;
+}
+
+.plans > li {
+  min-height: 42px;
+  padding: 0 0 0 40px;
+  background-image: url("icons/category.svg");
+  background-position: 4px center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+}
+
+span {
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.plans > li > span {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+}
+
+.plans ul li {
+  min-height: 44px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  background-color: rgb(153, 180, 102);
+  background-position: 4px center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.plans ul li span {
+  background-color: rgb(218, 106, 32);
+}
+
+.plans ul li:last-child {
+  margin-bottom: 0;
+}
+
+.plans .phone {
+  background-image: url("icons/phone.svg");
+}
+
+.plans .plane {
+  background-image: url("icons/plane.svg");
+}
+
+.plans .hotel {
+  background-image: url("icons/hotel.svg");
+}
+
+.plans .car {
+  background-image: url("icons/car.svg");
+}
+
+.plans .bar {
+  background-image: url("icons/bar.svg");
+}
+
+.plans .casino {
+  background-image: url("icons/casino.svg");
+}
+
+.plans .museum {
+  background-image: url("icons/museum.svg");
+}
+
+.plans .festival {
+  background-image: url("icons/festival.svg");
+}
+
+.plans .rest {
+  margin-top: 12px;
+}
+

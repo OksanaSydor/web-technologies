@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета студента</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page-container">
+    <header class="page-header">
+        <p class="eyebrow">СТУДЕНТСЬКА АНКЕТА</p>
+        <h1>Анкета студента</h1>
+        <p class="subtitle">Заповніть основну інформацію про себе</p>
+    </header>
+
+    <form action="questionnaire.html" method="get">
+        <!-- Блок 1. Особисті дані -->
+        <fieldset>
+            <legend>Особисті дані</legend>
+
+            <p>
+                <label for="firstName">Ім'я <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" value=""
+                       placeholder="Наприклад: Ірина" required tabindex="1">
+            </p>
+
+            <p>
+                <label for="lastName">Прізвище <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" value=""
+                       placeholder="Наприклад: Коваленко" required tabindex="2">
+            </p>
+
+            <p>
+                <label for="birthdate">Дата народження <span class="required">*</span></label>
+                <input type="date" id="birthdate" name="birthdate" value=""
+                       required tabindex="3">
+            </p>
+
+            <fieldset class="nested-fieldset">
+                <legend>Стать <span class="required">*</span></legend>
+                <div class="choice-list">
+                    <label class="choice" for="genderF"><input type="radio" id="genderF" name="gender" value="female" required tabindex="4"> Жіноча</label>
+                    <label class="choice" for="genderM"><input type="radio" id="genderM" name="gender" value="male" tabindex="5"> Чоловіча</label>
+                    <label class="choice" for="genderO"><input type="radio" id="genderO" name="gender" value="other" tabindex="6"> Інша</label>
+                </div>
+            </fieldset>
+        </fieldset>
+
+        <!-- Блок 2. Контакти та акаунт -->
+        <fieldset>
+            <legend>Контакти та акаунт</legend>
+
+            <p>
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" value=""
+                       placeholder="name@example.com"
+                       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                       title="Введіть коректну адресу, наприклад name@example.com"
+                       autocomplete="off" required tabindex="7">
+            </p>
+
+            <p>
+                <label for="phone">Мобільний телефон <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" value=""
+                       placeholder="+380501234567"
+                       pattern="(\+38)?0[0-9]{9}"
+                       title="Формат: +380501234567 або 0501234567"
+                       required tabindex="8">
+            </p>
+
+            <p>
+                <label for="password">Пароль (рівно 6 символів) <span class="required">*</span></label>
+                <input type="password" id="password" name="password" value=""
+                       placeholder="Напр.: Abc123"
+                       pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6}"
+                       minlength="6" maxlength="6"
+                       title="Рівно 6 символів: хоча б одна велика літера, одна мала літера та одна цифра"
+                       required tabindex="9">
+            </p>
+        </fieldset>
+
+        <!-- Блок 3. Навчання -->
+        <fieldset>
+            <legend>Навчання</legend>
+
+            <fieldset class="nested-fieldset">
+                <legend>Форма навчання</legend>
+                <div class="choice-list">
+                    <label class="choice" for="studyDay"><input type="radio" id="studyDay" name="studyForm" value="day" checked tabindex="10"> Денна</label>
+                    <label class="choice" for="studyExt"><input type="radio" id="studyExt" name="studyForm" value="extramural" tabindex="11"> Заочна</label>
+                    <label class="choice" for="studyOnline"><input type="radio" id="studyOnline" name="studyForm" value="online" tabindex="12"> Дистанційна</label>
+                </div>
+            </fieldset>
+
+            <p>
+                <label for="course">Курс</label>
+                <select id="course" name="course" tabindex="13">
+                    <option value="1">1 курс</option>
+                    <option value="2">2 курс</option>
+                    <option value="3" selected>3 курс</option>
+                    <option value="4">4 курс</option>
+                    <option value="master">Магістратура</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="city">Місто проживання</label>
+                <input type="text" id="city" name="city" list="cities" value=""
+                       placeholder="Почніть вводити назву міста" tabindex="14">
+                <datalist id="cities">
+                    <option value="Київ">
+                    <option value="Львів">
+                    <option value="Чернівці">
+                    <option value="Одеса">
+                    <option value="Харків">
+                    <option value="Дніпро">
+                </datalist>
+            </p>
+        </fieldset>
+
+        <!-- Блок 4. Інтереси -->
+        <fieldset>
+            <legend>Інтереси та вподобання</legend>
+
+            <fieldset class="nested-fieldset">
+                <legend>Захоплення</legend>
+                <div class="choice-list">
+                    <label class="choice" for="hobbyMusic"><input type="checkbox" id="hobbyMusic" name="hobby" value="music" tabindex="15"> Музика</label>
+                    <label class="choice" for="hobbySport"><input type="checkbox" id="hobbySport" name="hobby" value="sport" tabindex="16"> Спорт</label>
+                    <label class="choice" for="hobbyTravel"><input type="checkbox" id="hobbyTravel" name="hobby" value="travel" tabindex="17"> Подорожі</label>
+                    <label class="choice" for="hobbyIT"><input type="checkbox" id="hobbyIT" name="hobby" value="it" tabindex="18"> Програмування</label>
+                </div>
+            </fieldset>
+
+            <p>
+                <label for="languages">Знання технологій <span class="hint">(Ctrl + клік для кількох)</span></label>
+                <select id="languages" name="languages" multiple size="6" tabindex="19">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="country">Країна мрії для подорожі</label>
+                <select id="country" name="country" tabindex="20">
+                    <optgroup label="Європа">
+                        <option value="ua">Україна</option>
+                        <option value="pl">Польща</option>
+                        <option value="it">Італія</option>
+                    </optgroup>
+                    <optgroup label="Азія">
+                        <option value="jp">Японія</option>
+                        <option value="cn">Китай</option>
+                        <option value="kr">Південна Корея</option>
+                    </optgroup>
+                    <optgroup label="Америка">
+                        <option value="us">США</option>
+                        <option value="ca">Канада</option>
+                        <option value="br">Бразилія</option>
+                    </optgroup>
+                    <optgroup label="Африка">
+                        <option value="eg">Єгипет</option>
+                        <option value="ma">Марокко</option>
+                        <option value="ke">Кенія</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Блок 5. Додатково -->
+        <fieldset>
+            <legend>Додатково</legend>
+
+            <p>
+                <label for="about">Розкажіть про себе</label>
+                <textarea id="about" name="about" rows="5" cols="40"
+                          placeholder="Кілька речень про ваші цілі та досвід" tabindex="21"></textarea>
+            </p>
+
+            <p>
+                <label for="audio">Аудіофайли <span class="hint">(можна обрати кілька)</span></label>
+                <input type="file" id="audio" name="audio" accept="audio/*" multiple tabindex="22">
+            </p>
+        </fieldset>
+
+        <!-- Кнопки -->
+        <div class="button-row">
+            <button type="submit" name="send" value="get" tabindex="23">Надіслати (GET)</button>
+            <button type="submit" name="send" value="post" tabindex="24"
+                    formmethod="post" formenctype="multipart/form-data">Надіслати (POST + multipart)</button>
+            <button type="reset" name="clear" value="reset" tabindex="25" class="reset-button">Очистити</button>
+        </div>
+    </form>
+
+    <footer class="page-footer">
+        <a href="../index.html">← Повернутись на головну</a>
+    </footer>
+</main>
+</body>
+</html>

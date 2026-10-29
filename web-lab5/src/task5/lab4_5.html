@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5 — CSS-властивості</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Демонстрація CSS-властивостей</h1>
+        <p>Завдання 5: <code>box-sizing</code>, <code>overflow</code> та <code>display</code></p>
+    </header>
+
+    <main class="page-container">
+        <section class="demo-section" id="box-sizing">
+            <h2>1. Властивість <code>box-sizing</code></h2>
+            <p class="section-description">
+                Порівняння двох блоків з однаковими значеннями <code>width: 300px</code>,
+                <code>padding: 20px</code> і <code>border: 5px solid</code>.
+            </p>
+
+            <div class="box-sizing-examples">
+                <div class="size-box content-box">
+                    <h3>box-sizing: content-box</h3>
+                    <p>Ширина 300 px задає лише область вмісту. Внутрішні відступи та рамка додаються до неї.</p>
+                    <p class="total-width">Загальна ширина: <strong>350 px</strong></p>
+                </div>
+
+                <div class="size-box border-box">
+                    <h3>box-sizing: border-box</h3>
+                    <p>Ширина 300 px уже включає вміст, внутрішні відступи та рамку.</p>
+                    <p class="total-width">Загальна ширина: <strong>300 px</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section" id="overflow">
+            <h2>2. Властивість <code>overflow</code></h2>
+            <p class="section-description">
+                У блоках встановлено однаковий довгий текст і <code>max-height: 80px</code>.
+                Змініть значення <code>overflow</code>, щоб порівняти відображення вмісту.
+            </p>
+
+            <div class="overflow-example overflow-visible">
+                <strong>overflow: visible</strong> — Це довгий демонстраційний текст, який виходить за межі блока. Він потрібен, щоб показати, як браузер відображає вміст, коли для властивості overflow задано значення visible. За такого значення текст не обрізається, навіть якщо висота блока обмежена. Продовження тексту залишається видимим за рамкою елемента.
+            </div>
+
+            <div class="overflow-example overflow-hidden">
+                <strong>overflow: hidden</strong> — Це довгий демонстраційний текст, який виходить за межі блока. Він потрібен, щоб показати, як браузер відображає вміст, коли для властивості overflow задано значення visible. За такого значення текст не обрізається, навіть якщо висота блока обмежена. Продовження тексту залишається видимим за рамкою елемента.
+            </div>
+
+            <div class="overflow-example overflow-scroll">
+                <strong>overflow: scroll</strong> — Це довгий демонстраційний текст, який виходить за межі блока. Він потрібен, щоб показати, як браузер відображає вміст, коли для властивості overflow задано значення visible. За такого значення текст не обрізається, навіть якщо висота блока обмежена. Продовження тексту залишається видимим за рамкою елемента.
+            </div>
+
+            <div class="overflow-example overflow-auto">
+                <strong>overflow: auto</strong> — Це довгий демонстраційний текст, який виходить за межі блока. Він потрібен, щоб показати, як браузер відображає вміст, коли для властивості overflow задано значення visible. За такого значення текст не обрізається, навіть якщо висота блока обмежена. Продовження тексту залишається видимим за рамкою елемента.
+            </div>
+        </section>
+
+        <section class="demo-section" id="display">
+            <h2>3. Властивість <code>display</code></h2>
+            <p class="section-description">
+                Пункти меню розташовані горизонтально за допомогою <code>inline-block</code> і <code>block</code> — без використання <code>float</code> та <code>flex</code>.
+                Один із п'яти пунктів приховано.
+            </p>
+
+            <nav class="demo-navigation" aria-label="Демонстраційне меню">
+                <ul class="menu-list">
+                    <li><a href="#box-sizing">Пункт 1</a></li>
+                    <li><a href="#overflow">Пункт 2</a></li>
+                    <li><a href="#display">Пункт 3</a></li>
+                    <li class="menu-item-hidden"><a href="#hidden">Пункт 4 — прихований</a></li>
+                    <li><a href="#display">Пункт 5</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Приклад роботи властивостей CSS</p>
+    </footer>
+</body>
+</html>

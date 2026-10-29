@@ -1,0 +1,205 @@
+/* Базові стилі сторінки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #29223b;
+    background: #f7f4fc;
+}
+
+.page-header {
+    padding: 28px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6842a6, #9470c8);
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+}
+
+.page-header p {
+    margin: 0;
+}
+
+.page-container {
+    width: min(100% - 32px, 1000px);
+    margin: 28px auto;
+}
+
+.demo-section {
+    margin-bottom: 28px;
+    padding: 22px;
+    border: 1px solid #ded2ef;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(65, 39, 101, 0.07);
+}
+
+.demo-section h2 {
+    margin-top: 0;
+    color: #57348b;
+}
+
+.section-description {
+    margin-bottom: 18px;
+}
+
+code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #f0e8fa;
+    color: #58358d;
+}
+
+/* Частина 1: box-sizing */
+.box-sizing-examples {
+    font-size: 0; /* Прибираємо пробіли між inline-block елементами. */
+}
+
+.size-box {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid;
+    margin: 20px;
+    vertical-align: top;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.size-box h3 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.content-box {
+    box-sizing: content-box;
+    border-color: #8053b8;
+    background: #f2eafa;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px. */
+}
+
+.border-box {
+    box-sizing: border-box;
+    border-color: #4b8c83;
+    background: #e7f5f1;
+    /* Загальна ширина: 300px, оскільки padding і border входять у width. */
+}
+
+.total-width {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* Частина 2: overflow */
+.overflow-example {
+    width: 100%;
+    max-width: 760px;
+    max-height: 80px;
+    overflow: hidden;
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border: 2px solid #8b6bb5;
+    border-radius: 7px;
+    background: #faf7ff;
+    line-height: 1.5;
+}
+
+.overflow-example strong {
+    color: #57348b;
+}
+
+.overflow-visible {
+    overflow: visible;
+    /* Залишаємо місце для тексту, який видно за межами блока. */
+    margin-bottom: 88px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    border-color: #bb7c9e;
+    background: #fff5fa;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+    border-color: #628bb8;
+    background: #f2f8ff;
+}
+
+.overflow-auto {
+    overflow: auto;
+    border-color: #4b8c83;
+    background: #f0faf7;
+}
+
+/* Частина 3: display */
+.demo-navigation {
+    border-radius: 8px;
+    background: #57348b;
+}
+
+.menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Приховуємо маркери списку. */
+}
+
+.menu-list li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-list a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-list a:hover,
+.menu-list a:focus {
+    background: #7955ad;
+    outline: none;
+}
+
+.menu-list li.menu-item-hidden {
+    /* Повністю приховуємо пункт меню та прибираємо його з розкладки.
+       На відміну від visibility: hidden, місце під елемент не зберігається.
+       На відміну від opacity: 0, елемент не залишається прозорим
+       і не займає місця на сторінці. */
+    display: none;
+}
+
+.page-footer {
+    padding: 16px;
+    text-align: center;
+    color: #5c4a75;
+}
+
+.page-footer p {
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .demo-section {
+        padding: 16px;
+    }
+
+    .size-box {
+        display: block;
+        width: 300px;
+        max-width: calc(100% - 40px);
+        margin: 16px 20px;
+    }
+
+    .menu-list li:not(.menu-item-hidden) {
+        display: block;
+    }
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-візитівка — демонстрація CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero" id="top">
+            <div class="hero-mark" aria-hidden="true">ОС</div>
+            <div class="hero-text">
+                <p class="eyebrow">САЙТ-ВІЗИТІВКА · ПОРТФОЛІО</p>
+                <h1>Оксана Сидор</h1>
+                <p class="hero-subtitle">Студентка IT · Початківець веброзробник</p>
+                <p class="hero-description">
+                    Вивчаю створення сучасних вебсайтів, експериментую з HTML і CSS
+                    та перетворюю ідеї на зрозумілі цифрові рішення.
+                </p>
+                <a class="contact-link" href="mailto:hello@example.com">Написати мені</a>
+            </div>
+        </header>
+
+        <nav class="page-nav" aria-label="Навігація сторінкою">
+            <a href="#about">Про мене</a>
+            <a href="#tags">Теги й display</a>
+            <a href="#repeat">Повторення фону</a>
+            <a href="#sizing">Масштабування</a>
+            <a href="#attachment">Прокручування</a>
+        </nav>
+
+        <section class="intro-section" id="about">
+            <p class="section-kicker">01 / ПРО МЕНЕ</p>
+            <h2>Цікавість до технологій — у кожному пікселі</h2>
+            <p>
+                Мені подобається розбиратися, як працює веб: від структури HTML
+                до деталей оформлення CSS. Зараз я вдосконалюю навички верстки,
+                вчуся працювати з адаптивними інтерфейсами й створюю навчальні проєкти.
+            </p>
+            <div class="skill-list" aria-label="Мої навички">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Основи JavaScript</span>
+                <span>Командна робота</span>
+            </div>
+        </section>
+
+        <section class="demo-section" id="tags">
+            <p class="section-kicker">02 / DISPLAY</p>
+            <h2>Блок «Теги»</h2>
+            <p class="section-description">
+                Перший ряд містить п’ять <code>div</code> з <code>display: inline</code>.
+                У другому рядку п’ять <code>span</code> перетворено на блокові елементи.
+            </p>
+
+            <h3>Елементи <code>div</code> — inline</h3>
+            <div class="inline-tags" aria-label="Теги div у рядок">
+                <div class="inline-tag">HTML</div>
+                <div class="inline-tag">CSS</div>
+                <div class="inline-tag">UI</div>
+                <div class="inline-tag">UX</div>
+                <div class="inline-tag">WEB</div>
+            </div>
+            <p class="note">
+                <strong>Зверніть увагу:</strong> хоча для кожного <code>div</code> задано
+                <code>width: 200px</code> і <code>height: 100px</code>, ці розміри не діють,
+                оскільки для звичайних рядкових елементів ширина й висота не застосовуються.
+            </p>
+
+            <h3>Елементи <code>span</code> — block</h3>
+            <div class="block-tags" aria-label="Теги span стовпцем">
+                <span class="block-tag">Дизайн</span>
+                <span class="block-tag">Верстка</span>
+                <span class="block-tag">Адаптивність</span>
+                <span class="block-tag">Практика</span>
+                <span class="block-tag">Розвиток</span>
+            </div>
+            <p class="note">
+                Елементи <code>span</code> з <code>display: block</code> починаються з нового рядка,
+                утворюють стовпець, а задана ширина <code>150px</code> застосовується.
+            </p>
+        </section>
+
+        <section class="demo-section" id="repeat">
+            <p class="section-kicker">03 / BACKGROUND-REPEAT</p>
+            <h2>Блок «Повторення фону»</h2>
+            <p class="section-description">
+                У всіх прикладах використано одне зображення розміром 60 × 60 пікселів,
+                але спосіб розміщення фонового зображення відрізняється.
+            </p>
+            <div class="repeat-grid">
+                <div class="repeat-card repeat-x">
+                    <span class="demo-label">repeat-x</span>
+                </div>
+                <div class="repeat-card repeat-y">
+                    <span class="demo-label">repeat-y</span>
+                </div>
+                <div class="repeat-card repeat-space">
+                    <span class="demo-label">space</span>
+                </div>
+                <div class="repeat-card repeat-round">
+                    <span class="demo-label">round</span>
+                </div>
+            </div>
+            <p class="note">
+                <strong>Різниця між <code>space</code> і <code>round</code>:</strong>
+                <code>space</code> розподіляє копії зображення з проміжками між ними й не змінює
+                їхній розмір. <code>round</code> масштабує зображення так, щоб ціле число копій
+                умістилося в області без проміжків.
+            </p>
+        </section>
+
+        <section class="demo-section" id="sizing">
+            <p class="section-kicker">04 / BACKGROUND-SIZE</p>
+            <h2>Блок «Масштабування»</h2>
+            <p class="section-description">
+                Обидва блоки мають однаковий розмір 300 × 200 пікселів, рамку та фонове зображення.
+            </p>
+            <div class="size-examples">
+                <div class="size-card size-contain">
+                    <span class="demo-label">background-size: contain</span>
+                </div>
+                <div class="size-card size-cover">
+                    <span class="demo-label">background-size: cover</span>
+                </div>
+            </div>
+            <p class="note">
+                <code>contain</code> уміщує зображення повністю, тому навколо нього можуть залишитися
+                вільні ділянки. <code>cover</code> заповнює всю область, але частина зображення може обрізатися.
+            </p>
+        </section>
+
+        <section class="demo-section" id="attachment">
+            <p class="section-kicker">05 / BACKGROUND-ATTACHMENT</p>
+            <h2>Блок «Прокручування фону»</h2>
+            <p class="section-description">
+                Прокручуйте текст усередині кожного блока та порівнюйте, як поводиться фон.
+            </p>
+            <div class="attachment-grid">
+                <div class="attachment-card">
+                    <h3>background-attachment: scroll</h3>
+                    <div class="scroll-box attachment-scroll">
+                        <p>
+                            Це демонстраційний текст для перевірки прокручування фонового зображення.
+                            Коли вміст не вміщується у відведену висоту, усередині блока з’являється смуга прокручування.
+                        </p>
+                        <p>
+                            За значення <code>background-attachment: scroll</code> фон прив’язаний до самого
+                            блока і не рухається разом із прокручуваним внутрішнім вмістом.
+                        </p>
+                        <p>
+                            Це ще один абзац, щоб висоти вмісту точно вистачало для прокручування.
+                            Порівняйте візерунок на тлі з другим прикладом нижче.
+                        </p>
+                        <p>
+                            Повторюваний текст допомагає побачити різницю поведінки фону. Прокрутіть майже до кінця
+                            й поверніться на початок, щоб перевірити результат ще раз.
+                        </p>
+                    </div>
+                </div>
+                <div class="attachment-card">
+                    <h3>background-attachment: local</h3>
+                    <div class="scroll-box attachment-local">
+                        <p>
+                            Це демонстраційний текст для перевірки прокручування фонового зображення.
+                            Коли вміст не вміщується у відведену висоту, усередині блока з’являється смуга прокручування.
+                        </p>
+                        <p>
+                            За значення <code>background-attachment: local</code> фон рухається разом із вмістом
+                            під час внутрішнього прокручування блока.
+                        </p>
+                        <p>
+                            Це ще один абзац, щоб висоти вмісту точно вистачало для прокручування.
+                            Порівняйте візерунок на тлі з першим прикладом ліворуч.
+                        </p>
+                        <p>
+                            Повторюваний текст допомагає побачити різницю поведінки фону. Прокрутіть майже до кінця
+                            й поверніться на початок, щоб перевірити результат ще раз.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="note">
+                <code>scroll</code> означає, що фон не прокручується разом із внутрішнім вмістом.
+                <code>local</code> означає, що фон прокручується разом із вмістом елемента.
+            </p>
+        </section>
+
+        <footer class="site-footer">
+            <p>Дякую за перегляд!</p>
+            <p><a href="#top">На початок сторінки ↑</a> <span aria-hidden="true">·</span> <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p class="footer-small">Навчальний приклад HTML і CSS</p>
+        </footer>
+    </main>
+</body>
+</html>
