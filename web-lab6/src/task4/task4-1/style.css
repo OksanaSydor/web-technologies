@@ -1,0 +1,83 @@
+.menu>li {
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+
+.menu>li:last-child {
+    float: right;
+}
+
+img{
+    display: block;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: gray;
+    padding: 0;
+    box-sizing: border-box;
+    display: flow-root; /* враховує висоту елементів float */
+}
+
+.block-1 {
+   left: 0px;
+}
+
+.block-2 {
+    left: 72px;
+}
+
+.block-3 {
+    left: 144px;
+}
+
+.menu>li>a:hover{
+    background-color: lawngreen;
+}
+
+.menu> li:hover > .sub-menu {
+    display: block;
+
+}
+
+.menu> li:focus-within > .sub-menu {
+    display: block;
+
+}
+
+.sub-menu{
+    list-style: none;
+    display: none;
+}
+
+.menu > li:last-child > .sub-menu {
+    left: auto;
+    right: 0;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 5px 24px;
+    background-color: grey;
+}
+
+.menu > li:target > a {
+    background-color: forestgreen;
+}
+
+/*.menu::after {
+    content: "";
+    display: table;
+    clear: both;
+}

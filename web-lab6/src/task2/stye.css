@@ -1,0 +1,44 @@
+
+
+.block-1-1 {
+    border: 2px solid black;
+    border-left: 4px solid black;
+    padding: 5px 20px ;
+    position: relative;
+    background: forestgreen;
+}
+
+.block-1-2 {
+    border: 2px solid black;
+    padding: 5px 20px ;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: forestgreen;
+}
+
+.block-2-1 {
+    border: 2px solid black;
+    border-top: transparent;
+    padding: 5px 20px 100px ;
+    position: relative;
+    background: lightskyblue;
+    visibility: hidden
+}
+
+.block-2-2 {
+    border: 2px solid black;
+    border-top: transparent;
+    padding: 5px 20px 100px ;
+    position: relative;
+    background: lightskyblue;
+    visibility: hidden
+}
+
+.block-1-1:hover + .block-2-1 {
+    visibility: visible;
+}
+
+.block-1-2:hover + .block-2-2{
+    visibility: visible;
+}

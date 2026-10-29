@@ -1,0 +1,28 @@
+.menu > li {
+    padding: 5px 50px 5px 10px;
+    background-color: dodgerblue;
+    border-bottom: lightskyblue 2px solid;
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.menu li:hover > .sub-menu {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    align-items: center;
+    display: inline-flex;
+}
+
+img {
+    padding: 8px;
+}

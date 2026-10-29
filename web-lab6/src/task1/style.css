@@ -1,0 +1,45 @@
+.block-1 {
+    border: 2px solid black;
+    border-right-color: grey;
+    border-bottom-color: grey;
+    padding: 5px 40px 100px;
+    position: relative;
+    color: white;
+    z-index: 1;
+    background: deepskyblue;
+}
+
+.block-2 {
+    border: 2px solid black;
+    padding: 5px 40px 50px;
+    position: relative;
+    top: 50px;
+    left: -6px;
+    color: black;
+    background: lawngreen;
+}
+
+.block-3 {
+    border: 2px solid black;
+    border-bottom-color: grey;
+    padding: 5px 40px 5px;
+    position: relative;
+    top: 95px;
+    left: -12px;
+    color: black;
+    background: lightskyblue;
+}
+
+
+
+
+
+
+
+.block div {
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
